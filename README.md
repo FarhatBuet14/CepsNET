@@ -60,8 +60,8 @@ The csv files containing the labels should be put inside the corresponding folde
 python prepare_cepstralFeature.py --inp log-fbank
 ~~~~
 
-#### Training:
-For Training run the *trainer.py* and provide a dataset name (or fold name) i.e. *fold_0*. The command should be like this : 
+#### * Training:
+For Training run the *trainer.py* and provide a dataset name (or fold name) i.e. *fold_0*. 
 ~~~~{.python}
 python train.py fold_0
 ~~~~
@@ -71,10 +71,10 @@ python train.py fold_0 --ep 300 --batch 1000
 ~~~~
 
 
-#### Re-Generate Results or Validate with Pretrained Models:
+#### * Re-Generate Results or Validate with Pretrained Models:
 There is given a validation.ipynb file to validate the pretrained models with different types of input features. "pretrained.xlxs" is given in the "log" folder which preserves the hypyer-parameter of all the pretrained models. 
 
 Change the "feature" variable in the "Hyper-parameters" block and obeserve the validation result.
 
-#### McNemar’s Test
+#### * McNemar’s Test
 We have also provided "testbench.ipynb" file which contains the codes for comparing the results with McNemar’s Test. Put any two features in the "Selected Feature List" and run the "McNemar’s Test" block to compare.

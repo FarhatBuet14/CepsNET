@@ -40,8 +40,8 @@ We propose to use a fusion of Mel-FrequencyCepstral Coefficients (MFCC) and its 
 
 ## Installation
 ~~~~{.python}
-git clone https://github.com/FarhatBuet14/CepsNET-Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features.git
-cd CepsNET-Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features/codes
+git clone https://github.com/FarhatBuet14/Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features.git
+cd Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features/codes
 pip install -r requirements.txt
 ~~~~
 

@@ -1,5 +1,6 @@
 *.npz
 *.tar
+*.mat
 */.git/*
 .git/*
 */.vscode/*

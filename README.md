@@ -74,7 +74,7 @@ python train.py fold_0 --ep 300 --batch 1000
 
 
 #### * Re-Generate Results or Validate with Pretrained Models:
-There is given a validation.ipynb file to validate the pretrained models with different types of input features. *pretrained.xlxs* is given in the *log* folder which preserves the hypyer-parameter of all the pretrained models. 
+There is given a *validation.ipynb* file to validate the pretrained models with different types of input features. *pretrained.xlxs* is given in the *log* folder which preserves the hypyer-parameter of all the pretrained models. 
 
 Change the *feature* variable in the *Hyper-parameters* block and obeserve the validation result.
 

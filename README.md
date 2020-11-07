@@ -4,7 +4,7 @@ We propose to use a fusion of Mel-FrequencyCepstral Coefficients (MFCC) and its 
 
 ## Parametric Model of the Stethoscope
 
-![signal.png](https://github.com/FarhatBuet14/Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features/blob/main/images/signal.png)
+![signal.png](https://github.com/FarhatBuet14/CepsNET/blob/main/images/signal.png)
 
 ## Multiple Cepstral Features
 * *fbank*
@@ -18,21 +18,21 @@ We propose to use a fusion of Mel-FrequencyCepstral Coefficients (MFCC) and its 
 * *mfcc_13_d*
 * *mfcc_13_dd*
 
-![MFCC_flow.png](https://github.com/FarhatBuet14/Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features/blob/main/images/MFCC_flow.png)
+![MFCC_flow.png](https://github.com/FarhatBuet14/CepsNET/blob/main/images/MFCC_flow.png)
 
 ## Proposed Model Architechture
 
-![model%20architechture.png](https://github.com/FarhatBuet14/Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features/blob/main/images/model%20architechture.png)
+![model%20architechture.png](https://github.com/FarhatBuet14/CepsNET/blob/main/images/model%20architechture.png)
 
 ## Experimental Results
 
 * Validation Scores of Multiple Trainings 
 
-![Result_Table.png](https://github.com/FarhatBuet14/Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features/blob/main/images/Result_Table.png)
+![Result_Table.png](https://github.com/FarhatBuet14/CepsNET/blob/main/images/Result_Table.png)
 
 * Consequence of Domain Balanced Training (DBT)
 
-![tsne.png](https://github.com/FarhatBuet14/Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features/blob/main/images/tsne.png)
+![tsne.png](https://github.com/FarhatBuet14/CepsNET/blob/main/images/tsne.png)
 
 ## Requirements
 * Python 3.8.5
@@ -40,8 +40,8 @@ We propose to use a fusion of Mel-FrequencyCepstral Coefficients (MFCC) and its 
 
 ## Installation
 ~~~~{.python}
-git clone https://github.com/FarhatBuet14/Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features.git
-cd Abnormal-Heart-Sound-Detection-using-Fused-Cepstral-Features/codes
+git clone https://github.com/FarhatBuet14/CepsNET.git
+cd CepsNET/codes
 pip install -r requirements.txt
 ~~~~
 

@@ -48,24 +48,22 @@ pip install -r requirements.txt
 
 ## How To Run
 
-#### * Data Preparation:
+#### * Data Preparation
 
 1. First download the *data* folder from this [GoogleDrive Link](https://drive.google.com/drive/folders/1BCjfQ9yknozTeW4s4gTO-Vyd-f9WwYNB?usp=sharing)<br />
 Place [Physionet dataset](https://physionet.org/content/challenge-2016/1.0.0/#files) (not included in the provided *data* folder) in the corresponding folders inside the *data/physionet/training* folder.
 The csv files containing the labels should be put inside the corresponding folders inside the *labels* folder and all of them should have the same name, currently 'REFERENCE_withSQI.csv'. If you change the name you'll have to rename the variable *labelpath* in  *extract_segments.m*<br /> 
-2. Also download the *logs* folder from the same [Link](https://drive.google.com/drive/folders/1BCjfQ9yknozTeW4s4gTO-Vyd-f9WwYNB?usp=sharing)<br />
-Replace the folder with the repository folder. It contains all pretrained model files (.npz format) with the hyper-parameter description in the *pretrained.xlxs* file.
 3. Run *extract_segments.m* it first then run *data_fold.m* to create data fold in *mat* format which will be loaded by the model for training and testing. *fold_0.mat* is given inside *data/feature/folds* for convenience, so that you don't have to download the whole physionet dataset and extract data for training and testing.
 
 4. For preparing features, run *prepare_cepstralFeature.py* with passing the name of the input feature (Select from the given list) as an argument. It will prepare an .npz file, saved in the *data/feature/train_val_npzs* folder. For example,
 ~~~~{.python}
-python prepare_cepstralFeature.py --inp log-fbank
+python prepare_cepstralFeature.py --inp mfcc_13
 ~~~~
 
-#### * Training:
+#### * Training
 For Training run the *train.py* and provide a dataset name (or fold name) i.e. *fold_0*. 
 ~~~~{.python}
-python train.py fold_0
+python train.py --inp mfcc_13
 ~~~~
 Other parameters can be passed as arguments. 
 ~~~~{.python}
@@ -73,7 +71,10 @@ python train.py fold_0 --ep 300 --batch 1000
 ~~~~
 
 
-#### * Re-Generate Results or Validate with Pretrained Models:
+#### * Re-Generate Results
+Download the *logs* folder from the [Google Drive Link](https://drive.google.com/drive/folders/1BCjfQ9yknozTeW4s4gTO-Vyd-f9WwYNB?usp=sharing)<br />
+Replace the folder with the repository folder. It contains all pretrained model files (.npz format).
+
 There is given a *validation.ipynb* file to validate the pretrained models with different types of input features. *pretrained.xlxs* is given in the *log* folder which preserves the hypyer-parameter of all the pretrained models. 
 
 Change the *feature* variable in the *Hyper-parameters* block and obeserve the validation result.

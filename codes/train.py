@@ -1,4 +1,4 @@
-# python train.py --ep 300
+# python train.py --inp mfcc_13
 from __future__ import print_function, division, absolute_import
 
 import torch
@@ -15,6 +15,7 @@ import argparse
 import utils
 from utils import Scoring
 import h5py
+import pandas as pd
 
 class paramClass():
     def __init__(self):
@@ -32,15 +33,19 @@ param = paramClass()
 
 parser = argparse.ArgumentParser(description='Necessary variables')
 parser.add_argument("--ep",type=int, help = "Number of epochs")
-parser.add_argument("--input",type=str, help = "Input Feature")
+parser.add_argument("--inp",type=str, help = "Input Feature")
 parser.add_argument("--batch",type=int, help = "Batch Size")
 parser.add_argument("--lr",type=str, help = "Learning Rate")
 arguments = parser.parse_args()
 
-if(arguments.input): param.inp = arguments.input
 if(arguments.ep): param.epochs = arguments.ep
 if(arguments.batch): param.batch_size = arguments.batch
 if(arguments.lr): param.lr = arguments.lr
+
+df = pd.read_excel (r'../logs/pretrained.xlsx')
+features = df["feature"].iloc[:]
+index = [i for i, feat in enumerate(features) if(feat==arguments.inp)][0]
+param.inp = df["inp"][index]
 
 # --- Import train-validation Data 
 

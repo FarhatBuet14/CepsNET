@@ -35,12 +35,17 @@ parser = argparse.ArgumentParser(description='Necessary variables')
 parser.add_argument("--ep",type=int, help = "Number of epochs")
 parser.add_argument("--inp",type=str, help = "Input Feature")
 parser.add_argument("--batch",type=int, help = "Batch Size")
-parser.add_argument("--lr",type=str, help = "Learning Rate")
+parser.add_argument("--base_lr",type=str, help = "Minimum Learning Rate")
+parser.add_argument("--max_lr",type=str, help = "Maximum Learning Rate")
+parser.add_argument("--step_size",type=str, help = "Step Size Cyclic Learning Rate")
 arguments = parser.parse_args()
 
 if(arguments.ep): param.epochs = arguments.ep
 if(arguments.batch): param.batch_size = arguments.batch
 if(arguments.lr): param.lr = arguments.lr
+if(arguments.base_lr): param.base_lr = arguments.base_lr
+if(arguments.max_lr): param.max_lr = arguments.max_lr
+if(arguments.step_size): param.step_size = arguments.step_size
 
 df = pd.read_excel (r'../logs/pretrained.xlsx')
 features = df["feature"].iloc[:]
@@ -133,10 +138,9 @@ loss_fn = nn.CrossEntropyLoss()
 
 # --- Save the log
 
-fold_name = str(param.batch_size)+"__"+str(param.base_lr)+ \
-    "__" +str(param.max_lr)+"__"+str(param.epochs)
-
 log_dir = os.path.join(param.log_dir, param.inp)
+if(not os.path.isdir(log_dir)):os.mkdir(log_dir)
+log_dir = os.path.join(log_dir, str(datetime.now())[:-10].replace(":", "_"))
 if(not os.path.isdir(log_dir)):os.mkdir(log_dir)
 
 import CSVLogger as log

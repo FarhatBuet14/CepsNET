@@ -61,13 +61,13 @@ python prepare_cepstralFeature.py --inp mfcc_13
 ~~~~
 
 #### * Training
-For Training run the *train.py* and provide a dataset name (or fold name) i.e. *fold_0*. 
+For Training run the *train.py* and provide a feature name i.e. *mfcc_13*. 
 ~~~~{.python}
 python train.py --inp mfcc_13
 ~~~~
 Other parameters can be passed as arguments. 
 ~~~~{.python}
-python train.py fold_0 --ep 300 --batch 1000 
+python train.py --ep 300 --batch 1000 
 ~~~~
 
 

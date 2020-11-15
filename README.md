@@ -80,4 +80,4 @@ There is given a *validation.ipynb* file to validate the pretrained models with 
 Change the *feature* variable in the *Hyper-parameters* block and obeserve the validation result.
 
 #### * McNemar’s Test
-We have also provided *testbench.ipynb* file which contains the codes for comparing the results with McNemar’s Test. Put any two features in the *Selected Feature List* and run the *McNemar’s Test* block to compare.
+We have also provided *testbench.ipynb* file which contains the codes for comparing the results with McNemar’s Test. Put any input feature in the *Selected Feature* variable and run the *McNemar’s Test* block to compare. We have provided a file (*baseline_predictions.npz*) in the *logs* folder with the predictions of the baseline models (*potes* and *heartnet*) to compare with our proposed model.

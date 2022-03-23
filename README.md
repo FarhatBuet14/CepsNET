@@ -1,6 +1,8 @@
 ## Abnormal Heart Sound Detection Considering Additive and Convolutional Distortion using Fused Cepstral Features
 
-We propose to use a fusion of Mel-FrequencyCepstral Coefficients (MFCC) and its variants as the input to a 2D-Residual Neural Network architecture to address the presence of channel and additive noise distortion simultaneously.
+We propose to use a fusion of Mel-FrequencyCepstral Coefficients (MFCC) and its variants as the input to a 2D-Residual Neural Network architecture to address the presence of channel and additive noise distortion simultaneously. 
+
+See the paper [here] (https://arxiv.org/pdf/2106.01865.pdf)<br />
 
 ## Parametric Model of the Stethoscope
 

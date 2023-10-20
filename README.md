@@ -2,7 +2,7 @@
 
 We propose to use a fusion of Mel-FrequencyCepstral Coefficients (MFCC) and its variants as the input to a 2D-Residual Neural Network architecture to address the presence of channel and additive noise distortion simultaneously. 
 
-See the paper [here] (https://arxiv.org/pdf/2106.01865.pdf)
+See the paper [here]([https://arxiv.org/pdf/2106.01865.pdf](https://www.sciencedirect.com/science/article/abs/pii/S0933365722001695))
 
 ## Parametric Model of the Stethoscope
 
